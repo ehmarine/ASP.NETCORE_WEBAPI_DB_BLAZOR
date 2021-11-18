@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "p9xgvzzqgJUDPn+i+suWwiPsFTtvRtPEkOQdLibwItq37F9x4N0wEj5axGERtBqfaNHnsdKujYF8IHOXr3ikjg==",
+  "dgSpecHash": "rbyki4hMDnh/wuXOuGhGmcK8xvN1B1ygTbDVPaziYeJsjE/sJc0P0E4HOd5UcEnkuFvzqUZhANr0nb3LNfOuBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\herman\\Dropbox\\STUDIER\\FRONTEND\\BACKEND\\UPPGIFT\\eCommerce\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "C:\\Users\\herman\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.11\\microsoft.jsinterop.webassembly.5.0.11.nupkg.sha512",
     "C:\\Users\\herman\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\herman\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
-    "C:\\Users\\herman\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.11\\microsoft.netcore.app.runtime.browser-wasm.5.0.11.nupkg.sha512"
+    "C:\\Users\\herman\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.12\\microsoft.netcore.app.runtime.browser-wasm.5.0.12.nupkg.sha512"
   ],
   "logs": []
 }

@@ -87,13 +87,14 @@ namespace WebApi.Controllers
                 City = model.Adress.City
             }; */
 
+            var order = new Order();
             var user = new User()
             {
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.Email,
                 Password = model.Password,
-                AdressId = model.AdressId
+                /*AdressId = model.AdressId*/
             };
 
 

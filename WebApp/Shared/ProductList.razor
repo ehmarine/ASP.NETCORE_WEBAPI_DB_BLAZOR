@@ -1,34 +1,36 @@
-﻿<div class="container mt-5">
+﻿
+<div class="container mt-5">
     <div class="col-12 ">
-        <div class="list-group">
+        <div class="row">
 
-            @if (products == null)
+            @if (categories == null)
             {
-            <div class="d-flex justify-content-center align-items-center">
-                <div>
-                    <div class="spinner-grow" style="width: 2rem; height: 2rem; margin: 2rem;" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                    <div class="spinner-grow" style="width: 2rem; height: 2rem; margin: 2rem;" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                    <div class="spinner-grow" style="width: 2rem; height: 2rem; margin: 2rem;" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                </div>
-             </div>
-             <h4 class="text-center text-italic">Loading...</h4>
-           
+                <p>Loading all products..</p>
             }
             else
-            {@foreach (var product in products)
+            {
+                   
+                foreach (var category in categories)
                 {
-                    <div class="container d-flex">
-                     <ProductItem Item="@product" />
-                    </div>
+
+                <h2 class="mt-3">@category.CategoryName</h2>
+
+                    foreach (var product in category.Products)
+                    {
+
+                        if (category.Id == product.CategoryId)
+                        {
+                        <div class="col-12 col-lg-6">
+                            <ProductItem Item="@product" />
+                        </div>
+                        }
+
+                    }
                 }
             }
 
+            <h1 class="mt-5">ALLA PRODUKTER NEDAN</h1>
+        
 
         </div>
     </div>
@@ -41,20 +43,25 @@
     private async Task GetProductsAsync()
     {
         products = await Http.GetFromJsonAsync<Product[]>("https://localhost:44345/api/products");
-        Console.WriteLine(products);
 
     }
 
-    protected override void OnInitialized()
+    private Category[] categories;
+
+    private async Task GetCategoriesAsync()
     {
-        var timer = new Timer(new TimerCallback(_ => InvokeAsync(() => StateHasChanged())), null, 1000, 1000);
-    }
+        categories = await Http.GetFromJsonAsync<Category[]>("https://localhost:44345/api/categories");
 
+        StateHasChanged();
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await GetProductsAsync();
+        await GetCategoriesAsync();
+        StateHasChanged();
     }
+
 
 }
  

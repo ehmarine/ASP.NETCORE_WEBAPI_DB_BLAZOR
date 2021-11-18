@@ -36,7 +36,7 @@ FirstName nvarchar(100) not null,
 LastName nvarchar(100) not null,
 Email nvarchar(100) not null,
 Password nvarchar(max) not null,
-AdressId int not null references Adresses(Id)
+AdressId int references Adresses(Id)
 )
 
 GO

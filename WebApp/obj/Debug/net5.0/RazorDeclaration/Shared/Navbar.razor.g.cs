@@ -103,6 +103,27 @@ using System.Threading;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 50 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\Navbar.razor"
+       
+    private Category[] categories;
+
+    private async Task GetCategoriesAsync()
+    {
+        categories = await Http.GetFromJsonAsync<Category[]>("https://localhost:44345/api/Categories");
+
+        StateHasChanged();
+    }
+
+    protected override async void OnInitialized()
+    {
+        await GetCategoriesAsync();
+       
+    }
+
+#line default
+#line hidden
+#nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

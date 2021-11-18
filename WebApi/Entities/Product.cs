@@ -14,7 +14,7 @@ namespace WebApi.Entities
         public string LongDescription { get; set; }
         public string ImgUrl { get; set; }
         public decimal? Price { get; set; }
-        public bool InStock { get; set; }
+        public bool? InStock { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual OrderLine OrderLine { get; set; }

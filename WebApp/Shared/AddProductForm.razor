@@ -46,10 +46,6 @@
     <div class="mb-5">
         <button class="btn btn-secondary" type="submit">Add Product</button>
     </div>
-
-
-
-
 </EditForm>
 
 
@@ -65,6 +61,8 @@
         StateHasChanged();
     }
 
+
+
     private Category[] categories;
 
     private async Task GetCategoriesAsync()
@@ -73,7 +71,6 @@
         StateHasChanged();
 
     }
-
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

@@ -104,7 +104,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\ProductList.razor"
+#line 39 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\ProductList.razor"
        
     private Product[] products;
 
@@ -112,20 +112,25 @@ using System.Threading;
     private async Task GetProductsAsync()
     {
         products = await Http.GetFromJsonAsync<Product[]>("https://localhost:44345/api/products");
-        Console.WriteLine(products);
 
     }
 
-    protected override void OnInitialized()
+    private Category[] categories;
+
+    private async Task GetCategoriesAsync()
     {
-        var timer = new Timer(new TimerCallback(_ => InvokeAsync(() => StateHasChanged())), null, 1000, 1000);
-    }
+        categories = await Http.GetFromJsonAsync<Category[]>("https://localhost:44345/api/categories");
 
+        StateHasChanged();
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await GetProductsAsync();
+        await GetCategoriesAsync();
+        StateHasChanged();
     }
+
 
 
 #line default

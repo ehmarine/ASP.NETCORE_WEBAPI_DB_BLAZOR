@@ -135,3 +135,5 @@ C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApi\bin\De
 C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApi\obj\Debug\net5.0\WebApi.csproj.CopyComplete
+C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApi\bin\Debug\net5.0\WebApi.Views.dll

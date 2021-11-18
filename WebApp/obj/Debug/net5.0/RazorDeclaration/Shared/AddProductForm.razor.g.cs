@@ -104,7 +104,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 56 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\AddProductForm.razor"
+#line 52 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\AddProductForm.razor"
        
     private Product product = new();
 
@@ -117,6 +117,8 @@ using System.Threading;
         StateHasChanged();
     }
 
+
+
     private Category[] categories;
 
     private async Task GetCategoriesAsync()
@@ -125,7 +127,6 @@ using System.Threading;
         StateHasChanged();
 
     }
-
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

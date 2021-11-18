@@ -1,0 +1,55 @@
+﻿@page "/categories/{id}"
+
+
+@if (categories == null)
+{
+    <p>Loading..@Id</p>
+}
+else
+{
+    foreach (var cat in categories)
+                {
+                    if(cat.Id == Int32.Parse(Id))
+                    {
+                        if(cat.Products.Count > 0)
+                        {
+                            foreach (var product in cat.Products) {
+                                <ProductItem Item="@product" />
+                            }
+                        }
+                    }
+                }
+} 
+
+
+@code {
+
+    [Parameter]
+    public string Id { get; set; }
+
+    private Category[] categories;
+
+    private async Task GetCategoriesAsync()
+    {
+        categories = await Http.GetFromJsonAsync<Category[]>("https://localhost:44345/api/categories");
+        Console.WriteLine(categories);
+        StateHasChanged();
+    }
+
+    public Product Item { get; set; } = new();
+    public Category Cat { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Cat = await Http.GetFromJsonAsync<Category>($"https://localhost:44345/api/categories/{Id}");
+        Item = await Http.GetFromJsonAsync<Product>($"https://localhost:44345/api/products/{Id}");
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GetCategoriesAsync();
+        StateHasChanged();
+    }
+
+}
