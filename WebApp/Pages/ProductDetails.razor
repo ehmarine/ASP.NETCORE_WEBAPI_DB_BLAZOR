@@ -1,10 +1,14 @@
 ﻿@page "/product/{id}"
 
-<div class="container mt-5">
-    <h3>ProductDetails</h3>
-    <img src="@Item.ImgUrl" />
-    <h2>@Item.ProductName</h2>
-    <p>@Item.LongDescription</p>
+<div class="container mt-5 d-flex justify-content-betweeen">
+    <div class="p-5">
+        <h3>@Item.ProductName</h3>
+        <img src="@Item.ImgUrl" />
+    </div>
+    <div class="p-5 d-flex flex-column align-items-center justify-content-betweeen">
+        <h4>@Item.ShortDescription</h4>
+        <p>@Item.LongDescription</p>
+    </div>
 </div>
 
 @code {

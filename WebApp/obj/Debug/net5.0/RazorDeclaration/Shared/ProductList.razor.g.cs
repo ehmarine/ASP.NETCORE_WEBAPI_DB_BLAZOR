@@ -104,7 +104,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\ProductList.razor"
+#line 35 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\ProductList.razor"
        
     private Product[] products;
 

@@ -104,7 +104,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\Navbar.razor"
+#line 47 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\Navbar.razor"
        
     private Category[] categories;
 

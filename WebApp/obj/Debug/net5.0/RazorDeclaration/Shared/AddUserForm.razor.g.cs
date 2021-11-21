@@ -104,7 +104,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\AddUserForm.razor"
+#line 35 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Shared\AddUserForm.razor"
        
     private User user = new();
 

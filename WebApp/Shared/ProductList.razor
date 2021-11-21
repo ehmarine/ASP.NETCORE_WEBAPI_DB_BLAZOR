@@ -2,36 +2,32 @@
 <div class="container mt-5">
     <div class="col-12 ">
         <div class="row">
-
-            @if (categories == null)
-            {
-                <p>Loading all products..</p>
-            }
-            else
-            {
-                   
-                foreach (var category in categories)
+            
+                @if (categories == null)
+                {
+                    <p>Loading all products..</p>
+                }
+                else
                 {
 
-                <h2 class="mt-3">@category.CategoryName</h2>
-
-                    foreach (var product in category.Products)
+                    foreach (var category in categories)
                     {
+                        <h2 class="mt-3">@category.CategoryName</h2>
 
-                        if (category.Id == product.CategoryId)
+                        foreach (var product in category.Products)
                         {
-                        <div class="col-12 col-lg-6">
-                            <ProductItem Item="@product" />
-                        </div>
-                        }
 
+                            if (category.Id == product.CategoryId)
+                            {
+                                <div class="col-12 col-lg-6">
+                                    <ProductItem Item="@product" />
+                                </div>
+                            }
+
+                        }
                     }
                 }
-            }
-
-            <h1 class="mt-5">ALLA PRODUKTER NEDAN</h1>
-        
-
+            
         </div>
     </div>
 </div>

@@ -14,7 +14,9 @@ else
                         if(cat.Products.Count > 0)
                         {
                             foreach (var product in cat.Products) {
-                                <ProductItem Item="@product" />
+                                <div class="card bg-dark p-3">
+                                    <ProductItem Item="@product" />
+                                </div>
                             }
                         }
                     }

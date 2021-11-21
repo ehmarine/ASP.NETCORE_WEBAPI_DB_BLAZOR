@@ -105,7 +105,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Pages\Categories.razor"
+#line 27 "C:\Users\herman\Dropbox\STUDIER\FRONTEND\BACKEND\UPPGIFT\eCommerce\WebApp\Pages\Categories.razor"
        
 
     [Parameter]
